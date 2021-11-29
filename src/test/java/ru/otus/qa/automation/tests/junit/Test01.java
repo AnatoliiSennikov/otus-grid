@@ -14,7 +14,7 @@ public class Test01 {
 
     @Before
     public void setUp() {
-        driver = initDriver();
+         driver = initDriver();
     }
 
     @After
