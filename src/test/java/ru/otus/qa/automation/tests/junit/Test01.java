@@ -26,6 +26,7 @@ public class Test01 {
 
     @Test
     public void Test01Button(){
+        System.out.println("hi!");
         mainPage
                 .someButton();
     }
