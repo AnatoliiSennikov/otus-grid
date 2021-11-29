@@ -16,7 +16,7 @@ public class WebDriverInit {
         capabilities.setCapability("browserName", "chrome");
         capabilities.setCapability("browserVersion", "85.0");
         capabilities.setCapability("enableVNC", true);
-        capabilities.setCapability("enableVideo", false);
+        capabilities.setCapability("enableVideo", true);
         capabilities.setCapability("enableLogs", true);
         try {
             driver = new RemoteWebDriver(
