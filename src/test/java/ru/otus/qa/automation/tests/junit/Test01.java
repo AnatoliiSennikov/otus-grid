@@ -28,6 +28,5 @@ public class Test01 {
         driver.get("https://otus.ru");
         mainPage
                 .someButton();
-        Thread.sleep(10000);
     }
 }
