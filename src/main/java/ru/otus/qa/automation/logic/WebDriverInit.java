@@ -11,23 +11,24 @@ import java.net.URI;
 
 public class WebDriverInit {
     public static WebDriver initDriver() {
-//        WebDriver driver = null;
-//        DesiredCapabilities capabilities = new DesiredCapabilities();
-//        capabilities.setCapability("browserName", "chrome");
-//        capabilities.setCapability("browserVersion", "85.0");
-//        capabilities.setCapability("enableVNC", true);
-//        capabilities.setCapability("enableVideo", true);
-//        capabilities.setCapability("enableLogs", true);
-//        try {
-//            driver = new RemoteWebDriver(
-//                    URI.create("http://172.17.0.3:4444/wd/hub").toURL(),
-//                    capabilities
-//            );
-//        } catch (MalformedURLException e) {
-//            e.printStackTrace();
-//        }
-        WebDriverManager.chromedriver().setup();
+        WebDriver driver = null;
+        DesiredCapabilities capabilities = new DesiredCapabilities();
+        capabilities.setCapability("browserName", "chrome");
+        capabilities.setCapability("browserVersion", "85.0");
+        capabilities.setCapability("enableVNC", true);
+        capabilities.setCapability("enableVideo", true);
+        capabilities.setCapability("enableLogs", true);
+        try {
+            driver = new RemoteWebDriver(
+                    URI.create("http://localhost:4444/wd/hub").toURL(),
+                    capabilities
+            );
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        }
 
-        return new ChromeDriver();
+//        WebDriverManager.chromedriver().setup();
+
+        return driver;
     }
 }
