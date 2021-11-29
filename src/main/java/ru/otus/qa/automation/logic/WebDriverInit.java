@@ -20,7 +20,7 @@ public class WebDriverInit {
         capabilities.setCapability("enableLogs", true);
         try {
             driver = new RemoteWebDriver(
-                    URI.create("http://selenoid:4444/wd/hub").toURL(),
+                    URI.create("http://192.168.0.10:4444/wd/hub").toURL(),
                     capabilities
             );
         } catch (MalformedURLException e) {
